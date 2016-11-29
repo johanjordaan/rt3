@@ -113,7 +113,22 @@ playGame <- function(px,po) {
   return(gameState);
 }
 
+#' Player that always takes the first move in the list
+#'
+#' @param gameState The current gamestate
+#' @export
+#' @examples
+#' finalGameState <- playGame(px,py)
+firstAvailableMovePlayer <- function(gameState) {
+  return(getMoves(gameState)[1])
+}
 
-
-
-
+#' Player that picks a random move
+#'
+#' @param gameState The current gamestate
+#' @export
+#' @examples
+#' finalGameState <- playGame(px,py)
+randomMovePlayer <- function(gameState) {
+  return(sample(getMoves(gameState),1))
+}
