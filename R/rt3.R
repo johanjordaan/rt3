@@ -63,14 +63,20 @@ getWinner <- function(gameState) {
 makeMove <- function(gameState,move) {
   # Validate the move
   #
-  if(gameState$isDone)
+  if(gameState$isDone) {
     stop("game done")
+  }
 
-  if(move < 1 || move > 9 )
-    stop("illegal move")
+  if(move < 1 || move > 9 ) {
+    stop("illegal move (out of bounds)")
+  }
 
-  if(gameState$board[move] != "_")
-    stop("illegal move")
+  if(gameState$board[move] != "_") {
+    print(gameState)
+    print(move)
+    print(getMoves(gameState))
+    stop("illegal move (occupied square)")
+  }
 
   # Apply the move
   #
@@ -84,7 +90,7 @@ makeMove <- function(gameState,move) {
   # Winner loser and end of game
   #
   gameState$winner = getWinner(gameState)
-  gameState$isDone = gameState$winner != "_" || gameState$numMoves == 9
+  gameState$isDone = gameState$winner != "_" || (gameState$numMoves+1) == 9
 
   # Next player and move
   #
@@ -130,5 +136,13 @@ firstAvailableMovePlayer <- function(gameState) {
 #' @examples
 #' finalGameState <- playGame(px,py)
 randomMovePlayer <- function(gameState) {
-  return(sample(getMoves(gameState),1))
+  moves <- getMoves(gameState)
+
+  if(length(moves)==0) {
+    print(gameState)
+    error("no moves")
+  }
+
+  if(length(moves) == 1) return(moves[1])
+  else return(sample(moves,1))
 }
