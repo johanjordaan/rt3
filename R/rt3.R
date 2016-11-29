@@ -1,3 +1,7 @@
+#' This is a R Tic-Tac-Toe library
+#'
+#'
+
 #' Start a new game
 #'
 #' @export
@@ -18,6 +22,12 @@ startGame <- function() {
   return(gameState)
 }
 
+#' Get the current valid moves
+#'
+#' @param gameState This is a gamestate greated by startGame
+#' @export
+#' @examples
+#' moves <- getMoves(gameState)
 getMoves <- function(gameState) {
   return(which(gameState$board == "_"));
 }
@@ -43,6 +53,13 @@ getWinner <- function(gameState) {
   return("_");
 }
 
+#' Apply the move to the current game state an produce a new game state
+#'
+#' @param gameState The gamestate to apply the move to
+#' @param move One of the moves returned by getMoves()
+#' @export
+#' @examples
+#' gameState <- makeMoves(gameState,move)
 makeMove <- function(gameState,move) {
   # Validate the move
   #
@@ -55,10 +72,7 @@ makeMove <- function(gameState,move) {
   if(gameState$board[move] != "_")
     stop("illegal move")
 
-
-
-
-  # Applythe move
+  # Apply the move
   #
   gameState$board[move] <- gameState$currentPlayer
 
@@ -72,7 +86,6 @@ makeMove <- function(gameState,move) {
   gameState$winner = getWinner(gameState)
   gameState$isDone = gameState$winner != "_" || gameState$numMoves == 9
 
-
   # Next player and move
   #
   gameState$currentPlayer = ifelse(gameState$currentPlayer=="X","O","X")
@@ -82,7 +95,23 @@ makeMove <- function(gameState,move) {
 }
 
 
+#' Play a game using the two strageries
+#'
+#' @param px The X player strategy
+#' @param po The O player strategy
+#' @export
+#' @examples
+#' finalGameState <- playGame(px,py)
+playGame <- function(px,po) {
+  players = list("X"=px,"O"=po)
 
+  gameState <- startGame()
+  while(!gameState$isDone) {
+    player <- players[[gameState$currentPlayer]]
+    gameState <- makeMove(gameState,player(gameState))
+  }
+  return(gameState);
+}
 
 
 
