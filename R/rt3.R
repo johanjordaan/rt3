@@ -1,23 +1,44 @@
 #' This is a R Tic-Tac-Toe library
 #'
+#' @author Johan Jordaan
 #'
+
+#' Constant for X player
+#'
+#' @export
+X <- "X"
+
+#' Constant for Y player
+#'
+#' @export
+O <- "O"
+
+#' Constant for empty square
+#'
+#' @export
+EMPTY <- "_"
+
+#' Constant for no winner
+#'
+#' @export
+NONE <- "_"
 
 #' Start a new game
 #'
 #' @export
 #' @examples
 #' gameState <- startGame()
-
-# TODO : Split constants out
 startGame <- function() {
+  startingPlayer <- sample(c(X,O),1)
   gameState = list(
-    board = rep("_",9),
-    currentPlayer = sample(c("X","O"),1),
+    board = rep(EMPTY,9),
+    currentPlayer = startingPlayer,
+    startingPlayer = startingPlayer,
     moves = rep(0,9),
-    movesP = rep("_",9),
+    movesP = rep(EMPTY,9),
     numMoves = 0,
     isDone = FALSE,
-    winner = "_"
+    winner = NONE
   )
   return(gameState)
 }
@@ -29,15 +50,15 @@ startGame <- function() {
 #' @examples
 #' moves <- getMoves(gameState)
 getMoves <- function(gameState) {
-  return(which(gameState$board == "_"));
+  return(which(gameState$board == EMPTY));
 }
 
 getWinner <- function(gameState) {
 
   winner <- function(b,s) {
-    if(sum(b[s] == "X") == 3) return("X")
-    if(sum(b[s] == "O") == 3) return("O");
-    return("_")
+    if(sum(b[s] == X) == 3) return(X)
+    if(sum(b[s] == O) == 3) return(O);
+    return(NONE)
   }
 
   rcd <- list(
@@ -48,9 +69,9 @@ getWinner <- function(gameState) {
 
   for(t in rcd) {
     w <- winner(gameState$board,t)
-    if(w != "_") return(w)
+    if(w != NONE) return(w)
   }
-  return("_");
+  return(NONE);
 }
 
 #' Apply the move to the current game state an produce a new game state
@@ -64,14 +85,20 @@ makeMove <- function(gameState,move) {
   # Validate the move
   #
   if(gameState$isDone) {
+    print(gameState)
+    print(move)
+    print(getMoves(gameState))
     stop("game done")
   }
 
   if(move < 1 || move > 9 ) {
+    print(gameState)
+    print(move)
+    print(getMoves(gameState))
     stop("illegal move (out of bounds)")
   }
 
-  if(gameState$board[move] != "_") {
+  if(gameState$board[move] != EMPTY) {
     print(gameState)
     print(move)
     print(getMoves(gameState))
@@ -90,11 +117,11 @@ makeMove <- function(gameState,move) {
   # Winner loser and end of game
   #
   gameState$winner = getWinner(gameState)
-  gameState$isDone = gameState$winner != "_" || (gameState$numMoves+1) == 9
+  gameState$isDone = gameState$winner != NONE || (gameState$numMoves+1) == 9
 
   # Next player and move
   #
-  gameState$currentPlayer = ifelse(gameState$currentPlayer=="X","O","X")
+  gameState$currentPlayer = ifelse(gameState$currentPlayer==X,O,X)
   gameState$numMoves = gameState$numMoves + 1
 
   return(gameState)
@@ -109,7 +136,7 @@ makeMove <- function(gameState,move) {
 #' @examples
 #' finalGameState <- playGame(px,py)
 playGame <- function(px,po) {
-  players = list("X"=px,"O"=po)
+  players = list(X=px,O=po)
 
   gameState <- startGame()
   while(!gameState$isDone) {

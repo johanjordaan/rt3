@@ -2,7 +2,7 @@
 % Please edit documentation in R/rt3.R
 \name{startGame}
 \alias{startGame}
-\title{This is a R Tic-Tac-Toe library}
+\title{Start a new game}
 \usage{
 startGame()
 }
