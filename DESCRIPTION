@@ -4,9 +4,9 @@ Title: Tic-Tac-Toe library for R
 Version: 0.1.0
 Author: Johan Jordaan
 Maintainer: Johan Jordaan <djjordaan@gmail.com>
-Description: This is a simple library of routines to play with the clsic game of tic-tac-toe
-      or naughts and crosses.
-License: MIT
+Description: This is a simple library of routines to play the
+      classic game of tic-tac-toe or naughts and crosses.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1
