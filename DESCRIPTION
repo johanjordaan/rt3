@@ -1,7 +1,7 @@
 Package: rt3
 Type: Package
-Title: Tic-Tac-Toe library for R
-Version: 0.1.0
+Title: Tic-Tac-Toe Library for R
+Version: 0.1.1
 Author: Johan Jordaan
 Maintainer: Johan Jordaan <djjordaan@gmail.com>
 Description: This is a simple library of routines to play the
