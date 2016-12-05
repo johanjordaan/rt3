@@ -1,16 +1,16 @@
-#' rt3: A package for playing Tic-Tac-Toe in R.
+#' rt3: A Package for Playing Tic-Tac-Toe in R.
 #'
 #' The rt3 package provides functions to allow a user to simulate
-#' Tic-Tac-Toe games. It provides a convenient \link[rt3]{gameState} object as
+#' tic-tac-toe games. It provides a convenient \link[rt3]{gameState} object as
 #' well as simple interface for developing new types of players.
 #'
 #' @references \url{https://en.wikipedia.org/wiki/Tic-tac-toe}
 #'
 #' @section Main Function:
-#' \link[rt3]{playGame} Play a game of Tic-Tac-Toe.
+#' \link[rt3]{playGame} Play a game of tic-tac-toe.
 #'
 #' @section Structures:
-#' \link[rt3]{gameState} A Tic-Tac-Toe game state.
+#' \link[rt3]{gameState} A tic-tac-toe game state.
 #'
 #' @section Constants:
 #' \link[rt3]{X} The X player.
@@ -25,7 +25,7 @@
 #' These functions are used by the \link[rt3]{playGame} function.The will also be usefull
 #' in building game decsion trees for more complex players.
 #'
-#' \link[rt3]{startGame} Create a new Tic-Tac-Toe game state.
+#' \link[rt3]{startGame} Create a new tic-tac-toe game state.
 #'
 #' \link[rt3]{getMoves} Get the current set of valid moves for a given game state
 #'

@@ -1,11 +1,10 @@
 Package: rt3
 Type: Package
-Title: Tic-Tac-Toe Library for R
-Version: 0.1.1
+Title: Tic-Tac-Toe Package for R
+Version: 0.1.2
 Author: Johan Jordaan
 Maintainer: Johan Jordaan <djjordaan@gmail.com>
-Description: This is a simple library of routines to play the
-      classic game of tic-tac-toe or naughts and crosses.
+Description: Play the classic game of tic-tac-toe (naughts and crosses).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
