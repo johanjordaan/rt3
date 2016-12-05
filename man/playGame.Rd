@@ -12,7 +12,7 @@ playGame(px, po)
 \item{po}{The O player strategy.}
 }
 \value{
-\link[rt3]{gameState} The final game state after playing a full game.
+gameState The final \link[rt3]{gameState} after playing a full game.
 }
 \description{
 Play a game of Tic-Tac-Toe using the two provided stragies.

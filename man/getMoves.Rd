@@ -7,7 +7,7 @@
 getMoves(gameState)
 }
 \arguments{
-\item{\link[rt3]{gameState}}{The game state for which moves must be calculated.}
+\item{gameState}{The \link[rt3]{gameState} for which moves must be calculated.}
 }
 \value{
 validMoves An array (["integer"]) of valid moves based on the provided game state.

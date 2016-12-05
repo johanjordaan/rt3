@@ -3,7 +3,7 @@
 #' @description This function starts a new game. It randomly assigns a
 #'  starting player and returns a new game state object.
 #'
-#' @return \link[rt3]{gameState} A new game state.
+#' @return gameState A new \link[rt3]{gameState}.
 #'
 #' @export
 #' @examples
@@ -41,7 +41,7 @@ gameState <- startGame()
 
 #' Get the list of valid move from the game state.
 #'
-#' @param \link[rt3]{gameState} The game state for which moves must be calculated.
+#' @param gameState The \link[rt3]{gameState} for which moves must be calculated.
 #' @return validMoves An array (["integer"]) of valid moves based on the provided game state.
 #' @export
 #' @examples
@@ -74,7 +74,7 @@ getWinner <- function(gameState) {
 
 #' Apply the move to the current game state an produce a new game state.
 #'
-#' @param \link[rt3]{gameState} The game state to apply the move to.
+#' @param gameState The \link[rt3]{gameState} to apply the move to.
 #' @param move The move to be applied to the game state.
 #' @return \link[rt3]{gameState} The game state after applying the move to the game state.
 #' @export
@@ -132,7 +132,7 @@ makeMove <- function(gameState,move) {
 #'
 #' @param px The X player strategy.
 #' @param po The O player strategy.
-#' @return \link[rt3]{gameState} The final game state after playing a full game.
+#' @return gameState The final \link[rt3]{gameState} after playing a full game.
 #' @export
 #' @examples
 #' px <- firstAvailableMovePlayer

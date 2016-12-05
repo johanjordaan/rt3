@@ -7,7 +7,7 @@
 startGame()
 }
 \value{
-\link[rt3]{gameState} A new game state.
+gameState A new \link[rt3]{gameState}.
 }
 \description{
 This function starts a new game. It randomly assigns a

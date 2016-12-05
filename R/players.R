@@ -3,7 +3,7 @@
 #' @description Internally this player calls \link[rt3]{getMoves} and then picks the first entry in the list of moves.
 #'   A player is a function that takes a game state as input and returns a valid move index.
 #'
-#' @param \link[rt3]{gameState} The game state that the player should act on.
+#' @param gameState The \link[rt3]{gameState} that the player should act on.
 #' @return moveIndex Index to a valid move as returned by the \link[rt3]{getMoves} function.
 #' @export
 #' @examples
@@ -20,7 +20,7 @@ firstAvailableMovePlayer <- function(gameState) {
 #'
 #'   A player is a function that takes a game state as input and returns a valid move index.
 #'
-#' @param \link[rt3]{gameState} The game state that the player should act on.
+#' @param gameState The \link[rt3]{gameState} that the player should act on.
 #' @return moveIndex Index to a valid move as returned by the \link[rt3]{getMoves} function.
 #' @export
 #' @examples

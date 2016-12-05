@@ -7,7 +7,7 @@
 randomMovePlayer(gameState)
 }
 \arguments{
-\item{\link[rt3]{gameState}}{The game state that the player should act on.}
+\item{gameState}{The \link[rt3]{gameState} that the player should act on.}
 }
 \value{
 moveIndex Index to a valid move as returned by the \link[rt3]{getMoves} function.

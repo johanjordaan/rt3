@@ -7,9 +7,9 @@
 makeMove(gameState, move)
 }
 \arguments{
-\item{move}{The move to be applied to the game state.}
+\item{gameState}{The \link[rt3]{gameState} to apply the move to.}
 
-\item{\link[rt3]{gameState}}{The game state to apply the move to.}
+\item{move}{The move to be applied to the game state.}
 }
 \value{
 \link[rt3]{gameState} The game state after applying the move to the game state.
