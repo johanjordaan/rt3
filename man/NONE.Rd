@@ -3,13 +3,13 @@
 \docType{data}
 \name{NONE}
 \alias{NONE}
-\title{Constant for no winner}
+\title{Constant for no winner. It's value is the character "_".}
 \format{An object of class \code{character} of length 1.}
 \usage{
 NONE
 }
 \description{
-Constant for no winner
+Constant for no winner. It's value is the character "_".
 }
 \keyword{datasets}
 

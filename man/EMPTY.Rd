@@ -3,13 +3,13 @@
 \docType{data}
 \name{EMPTY}
 \alias{EMPTY}
-\title{Constant for empty square}
+\title{Constant for the empty square. It's value is the character "_".}
 \format{An object of class \code{character} of length 1.}
 \usage{
 EMPTY
 }
 \description{
-Constant for empty square
+Constant for the empty square. It's value is the character "_".
 }
 \keyword{datasets}
 
