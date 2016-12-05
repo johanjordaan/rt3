@@ -9,8 +9,14 @@ randomMovePlayer(gameState)
 \arguments{
 \item{\link[rt3]{gameState}}{The game state that the player should act on.}
 }
+\value{
+moveIndex Index to a valid move as returned by the \link[rt3]{getMoves} function.
+}
 \description{
-Internally this player calls \link[rt3]{getMoves} and then picks an entry in the list of moves at random.
+Internally this player calls \link[rt3]{getMoves} and then picks an entry
+  in the list of moves at random.
+
+  A player is a function that takes a game state as input and returns a valid move index.
 }
 \examples{
 gameState <- startGame()

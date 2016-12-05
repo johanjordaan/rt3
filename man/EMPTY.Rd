@@ -9,7 +9,7 @@
 EMPTY
 }
 \description{
-Constant for the empty square. It's value is the character "_".
+It's value is the character "_".
 }
 \keyword{datasets}
 

@@ -2,17 +2,20 @@
 % Please edit documentation in R/main.R
 \name{makeMove}
 \alias{makeMove}
-\title{Apply the move to the current game state an produce a new game state}
+\title{Apply the move to the current game state an produce a new game state.}
 \usage{
 makeMove(gameState, move)
 }
 \arguments{
-\item{gameState}{The game state to apply the move to}
+\item{move}{The move to be applied to the game state.}
 
-\item{move}{The move to be applied to the game state}
+\item{\link[rt3]{gameState}}{The game state to apply the move to.}
+}
+\value{
+\link[rt3]{gameState} The game state after applying the move to the game state.
 }
 \description{
-Apply the move to the current game state an produce a new game state
+Apply the move to the current game state an produce a new game state.
 }
 \examples{
 gameState <- startGame()

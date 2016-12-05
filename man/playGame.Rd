@@ -2,17 +2,20 @@
 % Please edit documentation in R/main.R
 \name{playGame}
 \alias{playGame}
-\title{Play a game of Tic-Tac-Toe using the two strageries}
+\title{Play a game of Tic-Tac-Toe using the two provided stragies.}
 \usage{
 playGame(px, po)
 }
 \arguments{
-\item{px}{The X player strategy}
+\item{px}{The X player strategy.}
 
-\item{po}{The O player strategy}
+\item{po}{The O player strategy.}
+}
+\value{
+\link[rt3]{gameState} The final game state after playing a full game.
 }
 \description{
-Play a game of Tic-Tac-Toe using the two strageries
+Play a game of Tic-Tac-Toe using the two provided stragies.
 }
 \examples{
 px <- firstAvailableMovePlayer

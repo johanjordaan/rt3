@@ -3,13 +3,13 @@
 \docType{data}
 \name{O}
 \alias{O}
-\title{Constant for the O player. It's value is the character "O".}
+\title{Constant for the O player.}
 \format{An object of class \code{character} of length 1.}
 \usage{
 O
 }
 \description{
-Constant for the O player. It's value is the character "O".
+It's value is the character "O".
 }
 \keyword{datasets}
 

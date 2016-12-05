@@ -1,28 +1,31 @@
 #' rt3: A package for playing Tic-Tac-Toe in R.
 #'
-#' The rt3 package provides functions to allow a user to simulate Tic-Tac-Toe
-#' games. It provides a convinient gameState object as well as simple interface
-#' for developing new types of players.
+#' The rt3 package provides functions to allow a user to simulate
+#' Tic-Tac-Toe games. It provides a convenient \link[rt3]{gameState} object as
+#' well as simple interface for developing new types of players.
 #'
 #' @references \url{https://en.wikipedia.org/wiki/Tic-tac-toe}
 #'
 #' @section Main Function:
-#' \link[rt3]{playGame} Play a game of Tic-Tac-Toe
+#' \link[rt3]{playGame} Play a game of Tic-Tac-Toe.
 #'
 #' @section Structures:
-#' \link[rt3]{gameState} A Tic-Tac-Toe game state
+#' \link[rt3]{gameState} A Tic-Tac-Toe game state.
 #'
 #' @section Constants:
-#' \link[rt3]{X} The X player
+#' \link[rt3]{X} The X player.
 #'
-#' \link[rt3]{O} The O player
+#' \link[rt3]{O} The O player.
 #'
-#' \link[rt3]{EMPTY} The EMPTY constant
+#' \link[rt3]{EMPTY} The EMPTY constant. Used to indicate an empty board position.
 #'
-#' \link[rt3]{NONE} The NONE constant
+#' \link[rt3]{NONE} The NONE constant. Used to indicate a draw.
 #'
 #' @section Support Functions:
-#' \link[rt3]{startGame} Create a new Tic-Tac-Toe game state
+#' These functions are used by the \link[rt3]{playGame} function.The will also be usefull
+#' in building game decsion trees for more complex players.
+#'
+#' \link[rt3]{startGame} Create a new Tic-Tac-Toe game state.
 #'
 #' \link[rt3]{getMoves} Get the current set of valid moves for a given game state
 #'

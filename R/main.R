@@ -1,7 +1,7 @@
 #' Start a new game
 #'
-#' @description This function starts a new game. It randomly assigns a starting user.
-#'  and return a new game state object.
+#' @description This function starts a new game. It randomly assigns a
+#'  starting player and returns a new game state object.
 #'
 #' @return \link[rt3]{gameState} A new game state.
 #'
@@ -29,7 +29,7 @@ startGame <- function() {
 #'   \item{board}{The boards state represented by a list. It contains a list of \link[rt3]{X}'s, \link[rt3]{O}'s and \link[rt3]{EMPTY}'s. It's initially filled by \link[rt3]{EMPTY}'s.}
 #'   \item{currentPlayer}{The player who needs to make the next move. This either \link[rt3]{X} or \link[rt3]{O}.}
 #'   \item{startingPlayer}{the player who was the first player to move in this game state. This either \link[rt3]{X} or \link[rt3]{O}.}
-#'   \item{moves}{The list of moves made by players to get to this game state. This initially filled with 0. }
+#'   \item{moves}{The list of moves made by players to get to this game state. This initially filled with 0's. }
 #'   \item{movesP}{The player turn list. It contains a list of alternating \link[rt3]{X}'s and \link[rt3]{O}'s }
 #'   \item{numMoves}{Number of moves made to get to this game state.}
 #'   \item{isDone}{This indicates wheter this is a final game state. It is final if either \link[rt3]{X} or \link[rt3]{O} has won if there is no winner: \link[rt3]{NONE}.  }
@@ -39,13 +39,14 @@ startGame <- function() {
 gameState <- startGame()
 
 
-#' Get the list of valid move from the game state
+#' Get the list of valid move from the game state.
 #'
-#' @param gameState The game state for which moves must be calculated
+#' @param \link[rt3]{gameState} The game state for which moves must be calculated.
+#' @return validMoves An array (["integer"]) of valid moves based on the provided game state.
 #' @export
 #' @examples
 #' gameState <- startGame()
-#' moves <- getMoves(gameState)
+#' validMoves <- getMoves(gameState)
 getMoves <- function(gameState) {
   return(which(gameState$board == EMPTY));
 }
@@ -71,10 +72,11 @@ getWinner <- function(gameState) {
   return(NONE);
 }
 
-#' Apply the move to the current game state an produce a new game state
+#' Apply the move to the current game state an produce a new game state.
 #'
-#' @param gameState The game state to apply the move to
-#' @param move The move to be applied to the game state
+#' @param \link[rt3]{gameState} The game state to apply the move to.
+#' @param move The move to be applied to the game state.
+#' @return \link[rt3]{gameState} The game state after applying the move to the game state.
 #' @export
 #' @examples
 #' gameState <- startGame()
@@ -126,10 +128,11 @@ makeMove <- function(gameState,move) {
 }
 
 
-#' Play a game of Tic-Tac-Toe using the two strageries
+#' Play a game of Tic-Tac-Toe using the two provided stragies.
 #'
-#' @param px The X player strategy
-#' @param po The O player strategy
+#' @param px The X player strategy.
+#' @param po The O player strategy.
+#' @return \link[rt3]{gameState} The final game state after playing a full game.
 #' @export
 #' @examples
 #' px <- firstAvailableMovePlayer

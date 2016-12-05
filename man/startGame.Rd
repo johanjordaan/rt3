@@ -10,8 +10,8 @@ startGame()
 \link[rt3]{gameState} A new game state.
 }
 \description{
-This function starts a new game. It randomly assigns a starting user.
- and return a new game state object.
+This function starts a new game. It randomly assigns a
+ starting player and returns a new game state object.
 }
 \examples{
 gameState <- startGame()

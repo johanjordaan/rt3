@@ -2,18 +2,21 @@
 % Please edit documentation in R/main.R
 \name{getMoves}
 \alias{getMoves}
-\title{Get the list of valid move from the game state}
+\title{Get the list of valid move from the game state.}
 \usage{
 getMoves(gameState)
 }
 \arguments{
-\item{gameState}{The game state for which moves must be calculated}
+\item{\link[rt3]{gameState}}{The game state for which moves must be calculated.}
+}
+\value{
+validMoves An array (["integer"]) of valid moves based on the provided game state.
 }
 \description{
-Get the list of valid move from the game state
+Get the list of valid move from the game state.
 }
 \examples{
 gameState <- startGame()
-moves <- getMoves(gameState)
+validMoves <- getMoves(gameState)
 }
 

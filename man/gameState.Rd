@@ -13,7 +13,7 @@ gameState
   \item{board}{The boards state represented by a list. It contains a list of \link[rt3]{X}'s, \link[rt3]{O}'s and \link[rt3]{EMPTY}'s. It's initially filled by \link[rt3]{EMPTY}'s.}
   \item{currentPlayer}{The player who needs to make the next move. This either \link[rt3]{X} or \link[rt3]{O}.}
   \item{startingPlayer}{the player who was the first player to move in this game state. This either \link[rt3]{X} or \link[rt3]{O}.}
-  \item{moves}{The list of moves made by players to get to this game state. This initially filled with 0. }
+  \item{moves}{The list of moves made by players to get to this game state. This initially filled with 0's. }
   \item{movesP}{The player turn list. It contains a list of alternating \link[rt3]{X}'s and \link[rt3]{O}'s }
   \item{numMoves}{Number of moves made to get to this game state.}
   \item{isDone}{This indicates wheter this is a final game state. It is final if either \link[rt3]{X} or \link[rt3]{O} has won if there is no winner: \link[rt3]{NONE}.  }
